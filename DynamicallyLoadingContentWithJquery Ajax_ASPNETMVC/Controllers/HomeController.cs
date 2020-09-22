@@ -17,6 +17,11 @@ namespace DynamicallyLoadingContentWithJquery_Ajax_ASPNETMVC.Controllers
             return View(db.EmployeeInfoes.ToList());
         }
 
+        public ActionResult EmpInfo(int id)
+        {
+            List<EmployeeInfo> empinfo = db.EmployeeInfoes.Where(n => n.EmpId == id).ToList();
+            return View(empinfo);
+        }
         // GET: Home/Details/5
         public ActionResult Details(int id)
         {

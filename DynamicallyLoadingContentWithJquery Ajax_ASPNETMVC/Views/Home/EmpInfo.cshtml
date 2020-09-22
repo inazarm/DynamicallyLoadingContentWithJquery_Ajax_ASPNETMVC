@@ -1,0 +1,17 @@
+﻿@model IEnumerable<DynamicallyLoadingContentWithJquery_Ajax_ASPNETMVC.Models.EmployeeInfo>
+@{
+    ViewBag.Title = "EmpInfo";
+}
+
+    <div class="container">
+        <h4 style="text-align:center; border-bottom:1px solid #808080"><u>Employee Info</u></h4>
+        @foreach (var item in Model)
+        {
+            <p><label>Name  : </label>@item.EmpName</p>
+            <p><label>Email : </label>@item.Email</p>
+            <p><label>Phone : </label>@item.Phone</p>
+            <p><label>Experience : </label>@item.Experience</p>
+        }
+
+    </div>
+
