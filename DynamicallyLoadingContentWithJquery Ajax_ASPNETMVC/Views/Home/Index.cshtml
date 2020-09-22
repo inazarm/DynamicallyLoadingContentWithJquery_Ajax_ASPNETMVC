@@ -1,0 +1,22 @@
+﻿@model IEnumerable<DynamicallyLoadingContentWithJquery_Ajax_ASPNETMVC.Models.EmployeeInfo>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <h3 style="text-align:center">--- Employee list ---</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th style="width:20%">ID</th>
+            <th style="width:80%">Name</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmpId</td>
+                <td><a href="#" data-toggle="popover" data-trigger="hover" id="@item.EmpId">@item.EmpName</a></td>
+            </tr>
+        }
+    </table>
+</div>
+
